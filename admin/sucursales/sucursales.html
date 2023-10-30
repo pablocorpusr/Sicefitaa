@@ -1,0 +1,166 @@
+<div class="row">
+    <div class="col-12 mt-2">
+        <div class="card" style="border-color: white">
+            <div class="card-header text-center" style="background-color: #EAFAF1">
+                <h3>M&oacute;dulo de Control de Sucursales</h3>
+            </div>
+            <div class="card-body">
+                <div  id="divDetalleSucursales" class="row">
+                    <div class="col-12">
+                        <div class="card" style="border-color:#7FB3D5 ; border-width: 5px; background-color:#EBF5FB">
+                            <div class="card-header text-bg-light" style="border-color:#7FB3D5; border-width: 5px">
+                                <span class="h4" >Detalles Sucursal</span>
+                                <button class="float-end btn btn-outline-danger" onclick="cm.setDetalleSucursalVisible(false);" >
+                                    <i class="fa fa-times"></i>
+                                </button>  
+                            </div>
+                            <div class="card-body">
+                                <div class="form">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <div class="form-floating">
+                                                <input id="txtId" type="text" class="form-control" placeholder="Sucursal:"/>
+                                                <label  for="txtId">Id Sucursal</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="form-floating">
+                                                <input id="txtNombreSucursal" type="text" class="form-control" placeholder="NombreSucursal:"/>
+                                                <label  for="txtNombre">Nombre Sucursal</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="form-floating">
+                                                <input id="txtNombreTitular" type="text" class="form-control" placeholder="Nombre Titular:"/>
+                                                <label for="txtNombreTitular">Nombre Titular(dueño)</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="form-floating">
+                                                <input id="txtRfcTitular" type="text" class="form-control" placeholder="RFCTitular">
+                                                <label for="txtRfcTitular">RFC del Titular</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <div class="form-floating">
+                                            <input id="txtCalle" type="text" class="form-control" placeholder="Calle">
+                                            <label for="txtCalle">Calle</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-floating">
+                                            <input id="txtColonia" type="text" class="form-control" placeholder="Colonia">
+                                            <label for="txtColonia">Colonia</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-floating">
+                                            <input id="txtCiudad" type="text" class="form-control" placeholder="Ciudad">
+                                            <label for="txtCiudad">Ciudad</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <div class="form-floating">
+                                            <input id="txtEstado" type="text" class="form-control" placeholder="Estado">
+                                            <label for="txtEstado">Estado</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-floating">
+                                            <input id="txtCp" type="text" class="form-control" placeholder="C&oacute;digo Postal">
+                                            <label for="txtCp">C&oacute;digo Postal</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-floating">
+                                            <input id="txtTelefono" type="text" class="form-control" placeholder="Tel&eacute;fono">
+                                            <label for="txtTelefono">Tel&eacute;fono</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <div class="form-floating">
+                                            <input id="txtLongitud" type="text" class="form-control" placeholder="Longitud">
+                                            <label for="txtLongitud">Longitud</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-floating">
+                                            <input id="txtLatitud" type="text" class="form-control" placeholder="Latitud">
+                                            <label for="txtLatitud">Latitud</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-floating">
+                                            <select id="cmbEstatus" class="form-select" aria-label="Estatus">
+                                                <option value="-1"></option>
+                                                <option value="0">Inactivo</option>
+                                                <option value="1">Activo</option>
+                                            </select>
+                                            <label for="cmbGenero">Estatus</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-12">
+                                        <div class="text-center">
+                                            <button class="btn btn-primary me-2" onclick="cm.saveSucursal();">
+                                                <i class="fa fa-floppy-disk"></i>
+                                                Guardar</button>
+                                            <button class="btn btn-danger ms-2 me-2" onclick="cm.deleteSucursal();">
+                                                <i class="fa fa-trash-can"></i>
+                                                Eliminar</button>
+                                            <button class="btn btn-success ms-2" onclick="cm.clearForm();">
+                                                <i class="fa fa-plus"></i>
+                                                Nuevo</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="divCatalogoSucursales" class="row">
+                    <div class="col-12">
+                        <div class="card" style="border-color: #7FB3D5 ; border-width: 5px ; background-color: #EBF5FB" >
+                            <div class="card-header text-bg-light" style="border-color:#7FB3D5; border-width: 5px">
+                                <span class="h4"> Listado de Sucursales</span>
+                                <button class="ms-3 btn btn-outline-success" onclick="cm.clearAndShowDetalleSucursal();" >
+                                    <i class="fa-solid fa-house-medical"></i>
+                                    Nuevo</button>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <input id="txtFiltro" type="text" placeholder="Buscar"/>
+                                    <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+                                </div>
+                                <table class="mt-2 table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre Sucursal</th>
+                                            <th>C&oacute;digo Sucursal</th>
+                                            <th>Nombre Titular</th>
+                                            <th>Domicilio</th>
+                                            <th>Tel&eacute;fono</th>
+                                            <th></th>
+                                        </tr> 
+                                    </thead>
+                                    <tbody id="tbodySucursales">  
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

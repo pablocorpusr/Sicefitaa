@@ -1,0 +1,173 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card mt-2" style="border-color: white">
+            <div class="card-header text-center" style="background-color: #EAFAF1">
+                <h3>M&oacute;dulo de Control de Productos</h3>
+            </div>
+            <div id="divDetalleProducto" class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card" style="border-color:#7FB3D5 ; border-width: 5px; background-color:#EBF5FB">
+                            <div class="card-header text-bg-light" style="border-color:#7FB3D5; border-width: 5px">
+                                <span class="h4">Registrar Producto</span>
+                                <button class="float-end btn btn-outline-danger" onclick="cm.setDetalleProductoVisible();">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="form">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <div class="form-floating">
+                                                <input id="txtIdProducto" type="text" class="form-control" placeholder="Id">
+                                                <label for="txtIdProducto">Id</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="form-floating">
+                                                <input id="txtNombreProd" type="text" class="form-control" placeholder="Nombre">
+                                                <label for="txtNombreProd">Nombre</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="form-floating">
+                                                <input id="txtNomGen" type="text" class="form-control" placeholder="Nombre gen&eacute;rico">
+                                                <label for="txtNomGen">Nombre gen&eacute;rico</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="form-floating">
+                                                <input id="txtFormFarm" type="text" class="form-control" placeholder="Forma Farmaceutica">
+                                                <label for="txtFormFarm">Forma Farmaceutica</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-4">
+                                            <div class="form-floating">
+                                                <input id="txtUniMed" type="text" class="form-control" placeholder="Unidad de Medida">
+                                                <label for="txtUniMed">Unidad de Medida</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-floating">
+                                                <input id="txtPresentacion" type="text" class="form-control" placeholder="Presentaci&oacute;n">
+                                                <label for="txtPresentacion">Presentaci&oacute;n</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-floating">
+                                                <input id="txtIndiPrin" type="text" class="form-control" placeholder="Indicaci&oacute;n Principal">
+                                                <label for="txtIndiPrin">Indicaci&oacute;n Principal</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-4">
+                                            <div class="form-floating">
+                                                <input id="txtContraIndi" type="text" class="form-control" placeholder="Contraindiciaci&oacute;n">
+                                                <label for="txtContraIndi">Contraindicaci&oacute;n</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-floating">
+                                                <input id="txtConcentracion" type="text" class="form-control" placeholder="Concentraci&oacute;n">
+                                                <label for="txtConcentracion">Concentraci&oacute;n</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-floating">
+                                                <input id="txtUniEnvase" type="text" class="form-control" placeholder="Unidad de Envase">
+                                                <label for="txtUniEnvase">Unidad de Envase</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-4 ">
+                                            <div class="form-floating">
+                                                <input id="txtPrecioUnitario" type="text" class="form-control" placeholder="Precio Unitario">
+                                                <label for="txtPrecioUnitario">Precio Unitario</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="form-floating">
+                                                <select id="cmbEstatus" class="form-select" aria-label="Estatus">
+                                                    <option value="1">Activo</option>
+                                                    <option value="0">Inactivo</option>
+                                                </select>
+                                                <label for="cmbEstatus">Estatus</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="form-floating">
+                                                <input id="txtCodBarras" type="text" class="form-control" placeholder="C&oacute;digo de Barras">
+                                                <label for="txtCodBarras">C&oacute;digo de Barras</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-12">
+                                            <div class="text-center">
+                                                <button class="btn btn-primary me-2" onclick="cm.saveProd();">
+                                                    <i class="fa fa-floppy-disk"></i>
+                                                    Guardar
+                                                </button>
+                                                <button class="btn btn-danger ms-2 me-2" onclick="cm.deleteProducto();">
+                                                    <i class="fa fa-trash-can"></i>
+                                                    Eliminar
+                                                </button>
+                                                <button class="btn btn-success ms-2" onclick="cm.clearFormProd();">
+                                                    <i class="fa fa-plus"></i>
+                                                    Nuevo
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div id="divCatalogoProductos" class="row mt-3">
+                    <div class="col-12">
+                        <div class="card" style="border-color: #7FB3D5 ; border-width: 5px ; background-color: #EBF5FB">
+                            <div class="card-header text-bg-light" style="border-color:#7FB3D5; border-width: 5px">
+                                <span class="h4">C&aacute;talogo de Productos</span>
+                                <button class="ms-3 btn btn-outline-success" onclick="cm.clearAndShowDetalleProducto();">
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                    Nuevo
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <input id="txtFiltro" type="text" placeholder="Buscar" />
+                                    <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+                                </div>
+                                <div class="mt-2 table table-hover">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th>Forma Farmaceutica</th>
+                                                <th>Unidades Envase</th>
+                                                <th>Concentraci&oacute;n</th>
+                                                <th>Indicaci&oacute;n Principal</th>
+                                                <th>Precio Venta</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbodyProductos">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

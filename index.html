@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>SICEFA_Central - login</title>
+        <meta name="author" content="Damian lopez Ortega">
+        <meta name="keywords" content="sicefa, central">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- AGREGAMOS REFERENCIAS DE Boostrap -->
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap.min.css">
+        <!--link rel="stylesheet" href="style/bootstrap/css/bootstraputilities.min.css"-->
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap-grid.min.css">
+
+        <link rel="stylesheet" href="./style/fontawesome-free-6.4.0-web/css/all.css">
+
+        <!-- AGREGAMOS LA REFERENCIA DE SweetAlert2 -->
+        <link rel="stylesheet" href="style/sweetalert2/sweetalert2.min.css"> 
+        <link rel="stylesheet" href="./style/fontawesome-free-6.4.0-web/css/v4-shims.css" type="text/css"/>
+
+
+
+    </head>
+    <body style="background-color: #EAFAF1">
+        <div  class="container-fluid" style="color:#00518A">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="card" style="border-color:#006AB5 ; border-width: 4px ; background-color: #EAFAF1">
+                        <div class="card-header text-bg-light">
+                            <h1>Bienvenido al Sistema Central de Farmacias - Sistema Central</h1>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-3 text-center">
+                        <div class="card mt-xl-5" style="border-color: #006AB5 ; border-width: 4px ; background-color:white">
+                            <div class="card-header" style="border-color:#006AB5 ; border-width:2px ; background-color: #EBF5FB">
+                                <h2>Misi&oacute;n y Visi&oacute;n</h2>
+
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <h5>
+                                        <i class="fa-solid fa-crosshairs" style="color:blue "></i>
+                                        Misi&oacute;n
+                                    </h5>
+                                    Brindar un servicio farmac&eacute;utico de calidad en cada Unidad de Farmacia, 
+                                    garantizando producciones limpias, seguras y sostenibles de medicamentos naturales, 
+                                    qu&iacute;micos dispensariales, la &eacute;tica y consagraci&oacute;n fomentando la obtenci&oacute;n de 
+                                    indicadores de eficiencia econ&oacute;mica que aseguren el desarrollo de la Empresa.
+                                </div>
+                                <div class="mt-2">
+                                    <h5>
+                                        <i class="fa-solid fa-eye" style="color: blue"></i>
+                                        Visi&oacute;n
+                                    </h5>
+                                    Somos una Empresa capaz de brindar un servicio integral de calidad a nuestros clientes en su m&aacute;s amplia gama de intereses e 
+                                    insertados en los planes de desarrollo de salud. Nos distinguimos por contar con profesionales de alto nivel cient&iacute;fico, 
+                                    con gran humanismo, solidaridad, &eacute;tica profesional y consagraci&oacute;n.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 text-center">
+                        <div class="card mt-5" style="border-color: #006AB5 ; border-width: 5px ; background-color:#EBF5FB">
+                            <div class="card-header" style="border-color:#006AB5 ; border-width:3px ; background-color: white">
+                                <h2>Acceso al Sistema</h2>
+
+                            </div>
+                            <div class="card-body">
+                                <div class="card-header" style="border-color:#EBF5FB ; border-width:3px ; background-color: #EBF5FB">
+                                    <img src="media/img/logo.png" alt=""/>
+                                </div>
+                                <div>
+                                    <div class="form-group mt-2">
+                                        <label class="form-label h5" for="txtUsuario">
+                                            <i class="fa-solid fa-user"></i>
+                                            Usuario
+                                        </label>
+                                        <input id="txtUsuario" type="text" class="form-control" />
+                                    </div>
+                                    <div class="form-group mt-2" >
+                                        <label class="form-label h5" for="txtContrasenia">
+                                            <i class="fa-solid fa-lock"></i>
+                                            Contrase&ntilde;a
+                                        </label>
+                                        <input id="txtContrasenia" type="password" class="form-control" />
+                                    </div>
+                                    <div class="mt-3">
+                                        <button class="btn  btn-primary" onclick="login();">
+                                            <i class="fa-solid fa-right-to-bracket"></i>
+                                            Ingresar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 text-center">
+                        <div class="card mt-xl-5" style="border-color: #006AB5 ; border-width: 4px ; background-color:white">
+                            <div class="card-header" style="border-color:#006AB5 ; border-width:2px ; background-color: #EBF5FB">
+                                <h2>Acerca de Nosotros</h2>
+
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    Medicamos tu Vida S.A. es una empresa dedicada a la venta de medicamentos gen&eacute;ricos y de patente. 
+                                    Actualmente es reconocida en el mercado farmac&eacute;utico estatal, 
+                                    motivo por el cual logrado un r&aacute;pido crecimiento y actualmente cuenta con tres sucursales de venta repartidas 
+                                    en la ciudad de Le&oacute;n Guanajuato (Centro, Centro Max y Plaza Mayor).
+                                </div>
+                                <div class="mt-2">
+                                    <h5>
+                                        <i class="fa-solid fa-hand-holding-heart" style="color: blue"></i>
+                                        Valores
+                                    </h5>
+                                    <i class="fa-solid fa-circle" style="width: 10px"></i>
+                                    Personal dispuesto al cambio y a la mejora.<br>
+                                    <i class="fa-solid fa-circle" style="width: 10px"></i>
+                                    Alta direcci&oacute;n comprometida a la inversi&oacute;n en tecnolog&iacute;a innovadora.<br>
+                                    <i class="fa-solid fa-circle" style="width: 10px"></i>
+                                    Personal capacitado para las funciones que desempe&ntilde;a.<br>
+                                    <i class="fa-solid fa-circle" style="width: 10px"></i>
+                                    Dedicados diariamente a la atenci&oacute;n personalizada de nuestros clientes con el fin de mantenerlos satisfechos.<br>
+                                    <i class="fa-solid fa-circle" style="width: 10px"></i>
+                                    Comprometidos a llevar salud y bienestar a nuestros clientes, con medicamentos de calidad y a su alcance.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <script src="./style/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="./style/fontawesome-free-6.4.0-web/js/all.js"></script>
+            <script src="./style/sweetalert2/sweetalert2.all.min.js"></script>
+
+            <script src="js/sicefa_central_main.js"></script>
+
+            <!--script src="stylemain.js"></script-->
+    </body>
+</html>
